@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;
 }
-.joke-container {
+body {
     background: #eee;
     width: 100%;
     height: 100vh;
@@ -14,5 +14,45 @@
     justify-content: center;
     flex-direction: column;
 }
-.joke-container h1 {
+.joke-container {
+    width: 600px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #f3f3f3;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 32px 9px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 0px 32px 9px rgba(0,0,0,0.07);
+    box-shadow: 0px 0px 32px 9px rgba(0,0,0,0.07);
+    border-radius: 5px;
 }
+.joke-container img {
+    transform: scale(0.7);
+    position: absolute;
+    top: 0px;
+}
+.joke-container h1 {
+    font-size: 2.1rem;
+    position: absolute;
+    top: 275px;
+}
+.joke-container .joke {
+    padding: 4rem;
+    text-align: center;
+    position: absolute;
+    top: 300px;
+}
+.new-joke {
+    font-weight: 700;
+    bottom: 50px;
+    animation: blinker 2s linear infinite;
+    position: absolute;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }

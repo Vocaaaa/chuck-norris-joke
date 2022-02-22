@@ -11,12 +11,13 @@ function createJoke(parentElement) {
 
     const render = () => {
         element.innerHTML = `
-            <h1>Chuck Norris Joke Generator</h1>
             <img src="${ img }"</img>
+            <h1>Chuck Norris Joke Generator</h1>
             ${
                 isLoading ? `<div class="spinner"></div>` : 
                 `
-                <div>${ joke }</div>
+                <p class="joke">${ joke }</p>
+                <p class="new-joke">CTRL + R for a new joke.</p>
                 `
             }
         `;
